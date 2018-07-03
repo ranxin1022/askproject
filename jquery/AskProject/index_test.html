@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>知问前端</title>
+    <script src="js_lib/jquery.js"></script>
+    <script src="js_lib/jquery-ui.js"></script>
+    <script src="js_lib/jquery.validate.js"></script>
+    <script src="js_lib/jquery.form.js"></script>
+    <script src="js_lib/jquery.cookie.js"></script>
+    <script src="js_lib/messages_zh.js"></script>
+    <script src="js/index_test.js"></script>
+
+    <link rel="shortcut icon" type="image/x-icon" href="css/images/favicon.ico"/>
+    <link rel="stylesheet" href="css/jquery-ui.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+
+<div id="header">
+    <div class="header_main">
+        <!-- logo-->
+        <h1>知问</h1>
+        <!-- 搜索框 -->
+        <div class="header_search">
+            <input type="text" name="search" class="search"/>
+        </div>
+        <div class="header_button">
+           <!-- <input type="button" value="查询" id="search_button"/>-->
+            <button id="search_button">查询</button>
+        </div>
+        <div class="header_member">
+            <a href="###" id="reg_a">注册</a> | <a href="###" id="login_a">登录</a>
+        </div>
+    </div>
+
+</div>
+<form id="reg" action="index.html">
+    <!--
+    <input type="radio" name="sex" value="male" id="male"><label for="male">男</label></input>
+    <input type="radio" name="sex" value="female" id="female"><label for="female">女</label></input>
+
+    <input type="checkbox" name="color" value="red" id="red"><label for="red">红</label></input>
+    <input type="checkbox" name="color" value="green" id="green"><label for="green">绿</label></input>
+    <input type="checkbox" name="color" value="blue" id="blue"><label for="blue">蓝</label></input>
+<p id="myerror"></p>
+-->
+<p id="ajaxText"></p>
+    <p>
+        <label for="user">账号：</label>
+        <input type="text" name="user" id="user" title="我是title"/>
+        <span class="star">*</span>
+    </p>
+    <p>
+        <label for="pass">密码：</label>
+        <input type="password" name="pass" id="pass" class="text" />
+        <span class="star">*</span>
+    </p>
+    <p>
+        <label for="confirmPass">确认密码：</label>
+        <input type="password" name="confirmPass" id="confirmPass"/>
+        <span class="star">*</span>
+    </p>
+    <p>
+        <label for="email">邮箱：</label>
+        <input type="text" name="email" id="email" class="text" title="请输入正确的邮箱！"/>
+        <span class="star">*</span>
+    </p>
+    <p>
+        <label>性别：</label>
+        <input type="radio" name="sex" value="male" id="male" checked="checked"><label for="male">男</label></input><input type="radio" name="sex" value="female" id="female"><label for="female">女</label></input>
+    </p>
+    <!--<p>
+        <label for="bday">生日：</label>
+        <input type="text" readonly name="bday" id="bday" class="text"/>
+    </p>-->
+    <p>
+        <label for="bday1">生日：</label>
+        <input type="text"  name="bday1" id="bday1" class="text"/>
+    </p>
+
+</form>
+<input type="text" id="abc">
+<div id="login" title="会员登录">
+    表单区--会员登录
+</div>
+
+<input type="button" id="button" value="更新内容"/>
+<div id="tabs">
+    <ul>
+        <li><a href="tab1.html">Tab1</a></li>
+        <li><a href="tab2.html">Tab2</a></li>
+        <li><a href="tab3.html">Tab3</a></li>
+    </ul>
+
+</div>
+
+</body>
+</html>

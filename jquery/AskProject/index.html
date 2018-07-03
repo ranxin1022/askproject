@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<!--[if !IE]><script>window.location.href = "http://localhost/jquery/AskProject/error.html"</script><![endif] -->
+
+<!--[if lt IE 8]><script>window.location.href = "/jquery/error"</script><![endif] -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>知问前端</title>
+    <script src="js_lib/jquery.js"></script>
+    <script src="js_lib/jquery-ui.js"></script>
+    <script src="js_lib/jquery.validate.js"></script>
+    <script src="js_lib/jquery.form.js"></script>
+    <script src="js_lib/jquery.cookie.js"></script>
+
+    <script src="js_lib/messages_zh.js"></script>
+    <script src="ueditor/ueditor.config.js"></script>
+    <script src="ueditor/ueditor.all.js"></script>
+
+    <script src="js/index.js"></script>
+
+    <link rel="shortcut icon" type="image/x-icon" href="css/images/favicon.ico"/>
+    <link rel="stylesheet" href="css/jquery-ui.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="ueditor/themes/default/css/ueditor.css"/>
+</head>
+<body>
+
+<div id="header">
+    <div class="header_main">
+        <!-- logo-->
+        <h1>知问</h1>
+        <!-- 搜索框 -->
+        <div class="header_search">
+            <input type="text" name="search" class="search"/>
+        </div>
+        <div class="header_button">
+           <!-- <input type="button" value="查询" id="search_button"/>-->
+            <button id="search_button">查询</button>
+            <button id="question_button">提问</button>
+
+        </div>
+        <div class="header_member">
+            <a href="javascript: void(0);" id="reg_a">注册</a>
+            <a href="javascript: void(0);" id="member"></a> |
+
+            <a href="javascript: void(0);" id="login_a">登录</a>
+            <a href="javascript: void(0);" id="logout">退出</a>
+        </div>
+    </div>
+</div>
+
+<div id="main">
+    <div class="main_left">
+        <div id="tabs">
+            <ul>
+                <li><a href="tab1.html">tab1</a></li>
+                <li><a href="tab2.html">tab2</a></li>
+                <li><a href="tab3.html">tab3</a></li>
+            </ul>
+        </div>
+        <div class="content">
+        </div>
+    </div>
+    <div class="main_right">
+        <div id="accordion">
+            <h1>菜单1</h1>
+            <div>内容1</div>
+            <h1>菜单2</h1>
+            <div>内容2</div>
+            <h1>菜单3</h1>
+            <div>内容3</div>
+        </div>
+    </div>
+</div>
+
+
+
+<form id="reg" >
+    <!--
+    <input type="radio" name="sex" value="male" id="male"><label for="male">男</label></input>
+    <input type="radio" name="sex" value="female" id="female"><label for="female">女</label></input>
+
+    <input type="checkbox" name="color" value="red" id="red"><label for="red">红</label></input>
+    <input type="checkbox" name="color" value="green" id="green"><label for="green">绿</label></input>
+    <input type="checkbox" name="color" value="blue" id="blue"><label for="blue">蓝</label></input>
+<p id="myerror"></p>
+-->
+    <ol class="reg_error"></ol>
+    <p>
+        <label for="user">账&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;号：</label>
+        <input type="text" name="user" id="user" class="text"/>
+        <span class="star" >*</span>
+    </p>
+    <p>
+        <label for="pass">密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码：</label>
+        <input type="password" name="pass" id="pass" class="text" />
+        <span class="star">*</span>
+    </p>
+    <p>
+        <label for="confirmPass">确认密码：</label>
+        <input type="password" name="confirmPass" id="confirmPass" class="text"/>
+        <span class="star">*</span>
+    </p>
+    <p>
+        <label for="email">邮&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;箱：</label>
+        <input type="text" name="email" id="email" class="text" title="请输入正确的邮箱！"/>
+        <span class="star">*</span>
+    </p>
+    <p>
+        <label>性&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;别：</label>
+        <input type="radio" name="sex" value="male" id="male" checked="checked"><label for="male">男</label></input>
+        <input type="radio" name="sex" value="female" id="female"><label for="female">女</label></input>
+    </p>
+    <!--<p>
+        <label for="bday">生日：</label>
+        <input type="text" readonly name="bday" id="bday" class="text"/>
+    </p>-->
+    <p>
+        <label for="bday">生&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;日：</label>
+        <input type="text"  readonly name="bday" id="bday" class="text"/>
+    </p>
+
+</form>
+
+<form id="login">
+    <ol class="login_error"></ol>
+    <p>
+        <label for="user">账&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;号：</label>
+        <input type="text" name="user" id="login_user" class="text"/>
+        <span class="star" >*</span>
+    </p>
+    <p>
+        <label for="pass">密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码：</label>
+        <input type="password" name="pass" id="login_pass" class="text" />
+        <span class="star">*</span>
+    </p>
+    <p>
+        <input type="checkbox" name="expires" id="expires" checked="checked"/>
+        <label for="expires">登录后有效期一周</label>
+    </p>
+
+</form>
+
+<form id="question" title="提问">
+    <p>
+        <label for="title">问题名称：</label>
+        <input type="text" name="title" id="title" style="width: 390px" class="text"/>
+    </p>
+    <p>
+        <!--<textarea name="content" class="uEditorCustom">请输入问题描述</textarea>-->
+        <textarea id="content" name="content" type="text/plain">请输入问题描述</textarea>
+    </p>
+</form>
+
+<div id="loading">数据加载中...</div>
+<div id="error">请登陆后操作...</div>
+<div id="footer">
+    欢迎参观
+</div>
+</body>
+</html>
